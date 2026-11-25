@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* ==========================================================
+       轻音乐阅读夜 · Soft Music Reading
+       学号末位 4：主题「轻音乐阅读夜」，背景色 樱花粉 #FFE6EE
+       说明：.page 只有 background-color 的值做了调整，其余原样保留
+       ========================================================== */
+
+    /* 页面整体：樱花粉背景 + 居中排版（用 text-align 与 inline-block 居中） */
+    body {
+        font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+        background-color: #FFE6EE;
+        background-image: linear-gradient(165deg, #FFF0F7 0%, #FFE6EE 45%, #FFD9E8 100%);
+        color: #5A3B47;
+        line-height: 1.9;
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+
+    /* 主内容卡片：只改了 background-color */
+    .page {
+        display: inline-block;
+        background-color: #FFF8FB;
+        box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+        text-align: left;
+        max-width: 720px;
+    }
+
+    /* ③ 并集选择器：h1 ~ h6 统一颜色与字间距 */
+    h1, h2, h3, h4, h5, h6 {
+        color: #8A3F60;
+        letter-spacing: 1.5px;
+    }
+
+    h1 {
+        font-size: 165%;
+        line-height: 2.8;
+        letter-spacing: 3px;
+    }
+
+    h2 {
+        font-size: 122%;
+        font-weight: normal;
+        line-height: 2.4;
+    }
+
+    h3 {
+        font-size: 105%;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+    /* 常用对齐类 */
+    .center {
+        text-align: center;
+    }
+
+    /* 活动介绍段落：行高与首行缩进，让文字像书页一样舒展 */
+    .intro-text {
+        line-height: 2.0;
+        text-indent: 2em;
+    }
+
+    /* ④ ID 选择器：只作用于 <p id="intro">，不会影响 <h2 id="intro"> */
+    p#intro {
+        font-size: 132%;
+        font-weight: bold;
+        color: #C2416D;
+        line-height: 2.0;
+        text-indent: 2em;
+    }
+
+    /* 表格基础样式：用背景色与行高区分层次 */
+    table {
+        width: 100%;
+        background-color: #FFF2F8;
+        font-size: 90%;
+    }
+
+    th {
+        background-color: #FFD9E7;
+        font-weight: bold;
+        text-align: left;
+        line-height: 2.4;
+        letter-spacing: 0.5px;
+    }
+
+    td {
+        line-height: 2.1;
+    }
+
+    /* 斑马纹与鼠标悬停高亮 */
+    table tr:nth-child(even) {
+        background-color: #FFEAF2;
+    }
+
+    table tr:hover {
+        background-color: #FFDCEB;
+    }
+
+    /* ① 后代选择器：div 里 table 里的 a，只作用于名单中的姓名链接 */
+    div table a {
+        font-weight: bold;
+        font-size: 110%;
+        color: #B3406B;
+    }
+
+    /* ② 链接伪类：按 link、visited、hover、active 的顺序书写 */
+    a:link {
+        color: #C04A78;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #8D7B8F;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #E0648F;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: #4B5AA1;
+        text-decoration: underline;
+    }
+
+    /* ⑤ 带类名的链接 */
+    a.red {
+        color: #D43F6B;
+        font-weight: bold;
+    }
+
+    a.blue {
+        color: #4A7FA5;
+        font-weight: bold;
+    }
+
+    /* ⑥ 伪元素：段落首字放大、div 首行强调 */
+    p::first-letter {
+        font-size: 175%;
+        color: #D4406F;
+    }
+
+    div::first-line {
+        color: #A8456B;
+        font-weight: bold;
+    }
+
+    /* 底部公告区：字号略小，语气安静 */
+    .notice {
+        font-size: 90%;
+        line-height: 2.0;
+        color: #7A5462;
+    }
+
+    /* 分隔线：用背景渐变模拟，避免使用 border */
+    .divider {
+        height: 1px;
+        background: linear-gradient(to right, rgba(138, 63, 96, 0), rgba(138, 63, 96, 0.5), rgba(138, 63, 96, 0));
+    }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- ① 顶部标题区：div 内含一个 h1 作为页面主标题 -->
+    <h1 class="center">轻音乐阅读夜 · Soft Music Reading</h1>
+    <div class="divider"></div><br>
+
+    <!-- ② 活动介绍区 -->
+    <div>
+        <h2 id="intro" class="center">本周主题：让旋律轻一点，让书页慢一点</h2>
+
+        <p class="intro-text">夜色沉下来的时候，书店只留一半的灯。钢琴与弦乐从音箱里慢慢流出来，像风从书页之间走过；我们把音量调得很低，低到刚好能陪你把一页书读完。</p>
+
+        <p class="intro-text">这是一场不赶时间的阅读会。你可以带上正在读的那本书，也可以空手而来，在靠窗的位置坐下，听一段曲子，翻几页纸，偶尔和邻座的人轻声说上一句。</p>
+
+        <p class="intro-text">现场备了热牛奶、花草茶和几副干净的耳机。如果你刚好在听一首很喜欢的曲子，也欢迎把它分享出来，我们留了一支浅浅的麦，够听见就好。</p>
+
+        <!-- 这个 p 使用 id="intro"，会被 p#intro 放大、加粗、变色 -->
+        <p id="intro">本次席位只有二十个，报名后请留意短信确认；现场请把手机调成静音，把声音留在心里。</p>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- ③ 活动报名信息表格区 -->
+    <div>
+        <h3 class="center">活动报名名单</h3>
+
+        <table>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>分享书目</th>
+                <th>现场配乐</th>
+                <th>阅读状态</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td><a href="https://example.com/member1">林一苇</a></td>
+                <td>《瓦尔登湖》</td>
+                <td>德彪西《月光》</td>
+                <td>专注中</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td><a href="https://example.com/member2">顾青禾</a></td>
+                <td>《夜航西飞》</td>
+                <td>萨蒂《吉诺佩蒂》</td>
+                <td>松弛中</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>陈默</td>
+                <td>《雨天的书》</td>
+                <td>久石让《天空之城》</td>
+                <td>聆听中</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>苏晚</td>
+                <td>《小王子》</td>
+                <td>李闰珉《雨的印记》</td>
+                <td>专注中</td>
+            </tr>
+        </table>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- ④ 页面链接区：一个 div 内含两条链接 -->
+    <div>
+        <div class="center">
+            <a class="red" href="https://hongchenwusdnu.github.io/bookstore/job4.html">查看往期活动照片</a><br>
+            <a class="blue" href="zheng-0234-work3.html">在线咨询活动详情</a>
+        </div>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- ⑤ 底部公告区：至少三段公告文本，用 br 换行 -->
+    <div class="notice">
+        活动地点：文化东路 26 号「拾光书店」二层，地铁三号线「书香街」站 B 口出，步行约五分钟。<br>
+        活动时间：每周六 19:30 入场，21:00 结束；入场请轻声，给彼此留一点安静。<br>
+        温馨提醒：现场提供耳机与薄毯，借阅图书请在前台登记，离开时请把书放回原处。<br>
+        联系方式：到店可找阅读会召集人小禾，线上咨询请点击上方蓝色链接。
+    </div>
+
+    <br>
+
+</div>
+
+</body>
+</html>

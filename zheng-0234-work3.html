@@ -2,7 +2,13 @@
 <html>
 <head>
 <style>
-  
+    /* ==========================================================
+       轻音乐阅读夜 · Soft Music Reading
+       学号末位 4：主题「轻音乐阅读夜」，背景色 樱花粉 #FFE6EE
+       说明：.page 只有 background-color 的值做了调整，其余原样保留
+       ========================================================== */
+
+    /* 页面整体：樱花粉背景 + 居中排版（用 text-align 与 inline-block 居中） */
     body {
         font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
         background-color: #FFE6EE;
@@ -13,6 +19,7 @@
         text-align: center;
     }
 
+    /* 主内容卡片：只改了 background-color */
     .page {
         display: inline-block;
         background-color: #FFF8FB;
@@ -21,6 +28,7 @@
         max-width: 720px;
     }
 
+    /* ③ 并集选择器：h1 ~ h6 统一颜色与字间距 */
     h1, h2, h3, h4, h5, h6 {
         color: #8A3F60;
         letter-spacing: 1.5px;
@@ -44,15 +52,18 @@
         letter-spacing: 2px;
     }
 
+    /* 常用对齐类 */
     .center {
         text-align: center;
     }
 
+    /* 活动介绍段落：行高与首行缩进，让文字像书页一样舒展 */
     .intro-text {
         line-height: 2.0;
         text-indent: 2em;
     }
 
+    /* ④ ID 选择器：只作用于 <p id="intro">，不会影响 <h2 id="intro"> */
     p#intro {
         font-size: 132%;
         font-weight: bold;
@@ -61,6 +72,7 @@
         text-indent: 2em;
     }
 
+    /* 表格基础样式：用背景色与行高区分层次 */
     table {
         width: 100%;
         background-color: #FFF2F8;
@@ -79,6 +91,7 @@
         line-height: 2.1;
     }
 
+    /* 斑马纹与鼠标悬停高亮 */
     table tr:nth-child(even) {
         background-color: #FFEAF2;
     }
@@ -87,12 +100,14 @@
         background-color: #FFDCEB;
     }
 
+    /* ① 后代选择器：div 里 table 里的 a，只作用于名单中的姓名链接 */
     div table a {
         font-weight: bold;
         font-size: 110%;
         color: #B3406B;
     }
 
+    /* ② 链接伪类：按 link、visited、hover、active 的顺序书写 */
     a:link {
         color: #C04A78;
         text-decoration: none;
@@ -113,6 +128,7 @@
         text-decoration: underline;
     }
 
+    /* ⑤ 带类名的链接 */
     a.red {
         color: #D43F6B;
         font-weight: bold;
@@ -123,6 +139,7 @@
         font-weight: bold;
     }
 
+    /* ⑥ 伪元素：段落首字放大、div 首行强调 */
     p::first-letter {
         font-size: 175%;
         color: #D4406F;
@@ -133,12 +150,14 @@
         font-weight: bold;
     }
 
+    /* 底部公告区：字号略小，语气安静 */
     .notice {
         font-size: 90%;
         line-height: 2.0;
         color: #7A5462;
     }
 
+    /* 分隔线：用背景渐变模拟，避免使用 border */
     .divider {
         height: 1px;
         background: linear-gradient(to right, rgba(138, 63, 96, 0), rgba(138, 63, 96, 0.5), rgba(138, 63, 96, 0));
@@ -217,7 +236,7 @@
     <!-- ④ 页面链接区：一个 div 内含两条链接 -->
     <div>
         <div class="center">
-            <a class="red" href="https://hongchenwusdnu.github.io/bookstore/job4.html">查看往期活动照片</a><br>
+            <a class="red" href="https://wushinothing.github.io/sax-club/zheng-0234-work2.html">查看往期活动照片</a><br>
             <a class="blue" href="zheng-0234-work3.html">在线咨询活动详情</a>
         </div>
     </div>
